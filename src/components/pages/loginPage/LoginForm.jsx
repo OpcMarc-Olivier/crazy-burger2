@@ -18,9 +18,9 @@ const handleChange = (e)=>{
 }
   return (
     <form action="" onSubmit={handleSubmit}>
-        <h1>Bienvenue chez nous</h1>
+        <h1>Bienvenue chez nous!</h1>
         <br />
-        <h2>Connectez-vous!</h2>
+        <h2>Connectez-vous</h2>
         <input required onChange={handleChange} value={inputValue} type="" placeholder="Entrer votre prénom" /><button>Accéder à voter espace</button>
     </form>
   )
