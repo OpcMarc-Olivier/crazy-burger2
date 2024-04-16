@@ -1,20 +1,15 @@
 import { useState } from 'react'
-import LoginPage from './components/pages/loginPage/LoginPage'
-import Orderpage from './components/pages/orderPage/Orderpage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import ErrorPage from './components/pages/errorPage/ErrorPage'
-
+import LoginPage from './components/pages/loginPage/LoginPage'
+import OrderPage2 from './components/pages/orderPage/OrderPage2'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<LoginPage/>} />
-        <Route path='/orderpage' element={<Orderpage/>} />
-        <Route path='/errorpage' element={<ErrorPage/>} />
+        <Route path='/' element={<LoginPage />}></Route>
+        <Route path='/order' element={<OrderPage2 />}></Route>
       </Routes>
     </BrowserRouter>
   )
