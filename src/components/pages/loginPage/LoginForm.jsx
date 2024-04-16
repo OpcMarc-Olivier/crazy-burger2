@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
-import OrderPage2 from '../orderPage/OrderPage2';
+import {NavLink} from 'react-router-dom';
+
 
 
 
@@ -26,7 +26,7 @@ const handleChange = (e)=>{
         <br />
         <h2>Connectez-vous</h2>
         <input required onChange={handleChange} value={inputValue} type="" placeholder="Entrer votre prénom" />
-        <NavLink to='/order'>
+        <NavLink  to='/order'>
           <button>Accéder à votre espace</button>
         </NavLink>
     </form>

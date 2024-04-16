@@ -1,8 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+
 
 function OrderPage2() {
   return (
-    <div>OrderPage2</div>
+    <div>
+        <h1>Bonjou Marco</h1>
+        <NavLink to='/' ><
+            button>Déconnexion</button>
+        </NavLink>
+    </div>
   )
 }
 
