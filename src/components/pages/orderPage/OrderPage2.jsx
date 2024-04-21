@@ -1,11 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 
 
 function OrderPage2() {
+//state
+const {userName} = useParams()
+//render
   return (
     <div>
-        <h1>Bonjou Marco</h1>
+        <h1>Bonjour {userName}</h1>
         <NavLink to='/' ><
             button>Déconnexion</button>
         </NavLink>
