@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
+import {Link, NavLink, useNavigate} from 'react-router-dom';
+
+
+
 
 function LoginForm() {
     //state
 const [inputValue,setInputValue]= useState ("");
+const navigate = useNavigate ()
 //comportement
 
 const handleSubmit = (e)=>{
   e.preventDefault()
-  alert(`"Bonjour ${inputValue}!"`)
+  
   setInputValue("")
+  navigate(`order/${inputValue}`)
 }
 
 const handleChange = (e)=>{
@@ -21,7 +27,8 @@ const handleChange = (e)=>{
         <h1>Bienvenue chez nous!</h1>
         <br />
         <h2>Connectez-vous</h2>
-        <input required onChange={handleChange} value={inputValue} type="" placeholder="Entrer votre prénom" /><button>Accéder à voter espace</button>
+        <input required onChange={handleChange} value={inputValue} type="" placeholder="Entrer votre prénom" />
+        <button>Accéder à votre espace</button>
     </form>
   )
 }
