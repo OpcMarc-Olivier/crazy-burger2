@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
-import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForward } from "react-icons/io5";
 import { theme } from "../../../assets/theme/index";
+import Input2 from "./Input2.jsx";
+import { BsPersonCircle } from "react-icons/bs";
 
 function LoginForm() {
     //state
@@ -22,6 +23,7 @@ function LoginForm() {
         console.log(e.target.value);
         setInputValue(e.target.value);
     };
+
     return (
         <LoginFormStyled action="" onSubmit={handleSubmit}>
             <div className="form-title">
@@ -30,16 +32,15 @@ function LoginForm() {
                 <h2>Connectez-vous</h2>
             </div>
             <div className="form-content">
-                <div className="input-wrapper">
-                    <BsPersonCircle />
-                    <input
-                        required
-                        onChange={handleChange}
-                        value={inputValue}
-                        type=""
-                        placeholder="Entrer votre prénom"
-                    />
-                </div>
+                <Input2
+                    value={inputValue}
+                    onChange={handleChange}
+                    type="text"
+                    placeholder={"Entrez votre prénom"}
+                    required
+                    Icon={<BsPersonCircle className="icon" />}
+                />
+
                 <button className="button-with-icon">
                     <span>Accéder à mon espace</span>
                     <IoChevronForward className="icon" />
@@ -92,27 +93,6 @@ const LoginFormStyled = styled.form`
         gap: 18px;
         width: 400px;
 
-        .input-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 24px;
-            color: #d3d3d3;
-            border-radius: 5px;
-            gap: 13px;
-            background: white;
-
-            input {
-                border: none;
-                padding-right: 184px;
-            }
-
-            input::placeholder {
-                font-family: Arial;
-                font-size: 15px;
-            }
-        }
-
         .button-with-icon {
             display: flex;
             align-items: center;
@@ -144,11 +124,6 @@ const LoginFormStyled = styled.form`
                 opacity: 0.6;
                 cursor: not-allowed;
             }
-        }
-
-        .icon {
-            font-size: ${theme.fonts.P0};
-            margin-left: ${theme.spacing.xs};
         }
     }
 `;

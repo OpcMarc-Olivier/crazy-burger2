@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../assets/images/F03-logo-orange.png";
 import styled from "styled-components";
 import { theme } from "../../assets/theme";
