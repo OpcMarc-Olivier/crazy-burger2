@@ -3,7 +3,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { IoChevronForward } from "react-icons/io5";
 import { theme } from "../../../assets/theme/index";
-import Input2 from "./Input2.jsx";
+import TextInput from "../../reusable-ui/TextInput.jsx";
 import { BsPersonCircle } from "react-icons/bs";
 
 function LoginForm() {
@@ -20,7 +20,6 @@ function LoginForm() {
     };
 
     const handleChange = (e) => {
-        console.log(e.target.value);
         setInputValue(e.target.value);
     };
 
@@ -32,7 +31,7 @@ function LoginForm() {
                 <h2>Connectez-vous</h2>
             </div>
             <div className="form-content">
-                <Input2
+                <TextInput
                     value={inputValue}
                     onChange={handleChange}
                     type="text"

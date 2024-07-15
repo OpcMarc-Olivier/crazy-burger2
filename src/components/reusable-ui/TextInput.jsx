@@ -1,9 +1,8 @@
 import { BsPersonCircle } from "react-icons/bs";
 import styled from "styled-components";
-import { theme } from "../../../assets/theme/index";
+import { theme } from "../../assets/theme/index";
 
-function Input2({ value, onChange, Icon, className, ...extraProps }) {
-    console.log(extraProps);
+function TextInput({ value, onChange, Icon, className, ...extraProps }) {
     return (
         <InputStyled>
             {Icon && Icon}
@@ -38,4 +37,4 @@ const InputStyled = styled.div`
     }
 `;
 
-export default Input2;
+export default TextInput;
