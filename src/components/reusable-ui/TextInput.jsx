@@ -19,21 +19,24 @@ const InputStyled = styled.div`
     color: #d3d3d3;
     border-radius: 5px;
     gap: 13px;
-    background: white;
-
-    .icon {
-        font-size: ${theme.fonts.P0};
-        margin-left: ${theme.spacing.xs};
-    }
+    background: ${theme.colors.white};
 
     input {
+        color: ${theme.colors.dark};
         border: none;
         padding-right: 184px;
+        outline: none;
     }
 
     input::placeholder {
         font-family: Arial;
-        font-size: 15px;
+        font-size: ${theme.fonts.sizes.P1};
+        color: ${theme.colors.greyMedium};
+        width: 300px;
+    }
+
+    .icon {
+        color: ${theme.colors.greyDark};
     }
 `;
 

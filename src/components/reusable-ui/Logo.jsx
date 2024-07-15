@@ -15,13 +15,14 @@ function Logo() {
 }
 
 const LogoStyled = styled.div`
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: ${theme.spacing.md};
+    margin-top: ${theme.spacing.md};
     transform: scale(2.5);
     h1 {
         color: ${theme.colors.primary_burger};
-        font-family: "Amatic SC";
-        font-size: 36px;
+        font-family: "Amatic SC", cursive;
+        font-size: ${theme.fonts.sizes.P5};
+        font-weight: ${theme.fonts.weights.bold};
         margin: 0;
         letter-spacing: 1.5px;
         line-height: 1rem;
@@ -32,12 +33,7 @@ const LogoStyled = styled.div`
             vertical-align: middle;
             height: 60px;
             width: 80px;
-            margin-inline: 20px;
-            /* position: relative;
-            bottom: -36px;
-            height: 150px;
-            width: 200px;
-            padding: 0 20px; */
+            margin-inline: ${theme.spacing.md};
         }
     }
 `;
