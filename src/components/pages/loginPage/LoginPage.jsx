@@ -23,7 +23,7 @@ const LoginPageStyled = styled.div`
 
     &::before {
         content: "";
-        background: url(${backgroundImage});
+        background: url(${backgroundImage}) rgba(0, 0, 0, 0.5);
         background-size: cover;
         background-position: center;
         background-blend-mode: darken;
