@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import Main from "./Main";
+import { theme } from "../../../assets/theme";
 
 function OrderPage() {
     const { userName } = useParams();
@@ -31,6 +32,7 @@ const OrderPageStyled = styled.div`
         height: 95vh;
         width: calc(100% - 5vh);
         max-width: 1400px;
+        border-radius: ${theme.borderRadius.extraRound};
     }
 `;
 

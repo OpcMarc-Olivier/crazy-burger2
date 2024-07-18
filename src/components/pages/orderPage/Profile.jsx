@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../assets/theme/index";
 
-export default function Profile({ username }) {
+export default function Profile({ userName }) {
     return (
         <ProfileStyled>
             <div className="info">
                 <p>
-                    Hey, <b>{username}</b>
+                    Hey, <b>{userName}</b>
                 </p>
                 <NavLink to="/">
                     <div className="description">
