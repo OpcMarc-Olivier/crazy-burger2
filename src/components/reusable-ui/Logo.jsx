@@ -2,9 +2,9 @@ import logo from "../../assets/images/F03-logo-orange.png";
 import styled from "styled-components";
 import { theme } from "../../assets/theme";
 
-function Logo() {
+function Logo({ className }) {
     return (
-        <LogoStyled>
+        <LogoStyled className={className}>
             <h1>
                 Crazy
                 <img src={logo} alt="logo crazy-burger" />
@@ -17,7 +17,6 @@ function Logo() {
 const LogoStyled = styled.div`
     margin-bottom: ${theme.spacing.md};
     margin-top: ${theme.spacing.md};
-    transform: scale(2.5);
     h1 {
         color: ${theme.colors.primary_burger};
         font-family: "Amatic SC", cursive;
