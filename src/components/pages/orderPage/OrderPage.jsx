@@ -22,7 +22,7 @@ const OrderPageStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: orange;
+    background: ${theme.colors.primary};
     height: 100vh;
 
     .container {
