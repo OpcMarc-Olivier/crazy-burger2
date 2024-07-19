@@ -2,11 +2,11 @@ import logo from "../../assets/images/F03-logo-orange.png";
 import styled from "styled-components";
 import { theme } from "../../assets/theme";
 
-function Logo({ className }) {
+function Logo({ className, onClick }) {
     return (
-        <LogoStyled className={className}>
+        <LogoStyled className={className} onClick={onClick}>
             <h1>
-                Crazy
+                Crazee
                 <img src={logo} alt="logo crazy-burger" />
                 burger
             </h1>
@@ -20,7 +20,8 @@ const LogoStyled = styled.div`
     h1 {
         color: ${theme.colors.primary_burger};
         font-family: "Amatic SC", cursive;
-        font-size: ${theme.fonts.sizes.P5};
+        font-size: ${theme.fonts.sizes.P4};
+        font-style: normal;
         font-weight: ${theme.fonts.weights.bold};
         margin: 0;
         letter-spacing: 1.5px;
@@ -32,7 +33,7 @@ const LogoStyled = styled.div`
             vertical-align: middle;
             height: 60px;
             width: 80px;
-            margin-inline: ${theme.spacing.md};
+            margin-inline: ${theme.spacing.xxs};
         }
     }
 `;
