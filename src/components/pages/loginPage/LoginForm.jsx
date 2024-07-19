@@ -96,7 +96,6 @@ const LoginFormStyled = styled.form`
     }
     .icon {
         font-size: ${theme.fonts.sizes.P0};
-        margin-left: ${theme.spacing.xs};
     }
 `;
 

@@ -43,6 +43,9 @@ const PrimaryButtonStyled = styled.button`
         opacity: 0.6;
         cursor: not-allowed;
     }
+    label {
+        cursor: pointer;
+    }
 `;
 
 export default PrimaryButton;

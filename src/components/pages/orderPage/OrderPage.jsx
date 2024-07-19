@@ -1,9 +1,39 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import Main from "./Main";
+import { theme } from "../../../assets/theme";
 
 function OrderPage() {
-  return (
-    <div>OrderPage</div>
-  )
+    const { userName } = useParams();
+    return (
+        <OrderPageStyled>
+            <div className="container">
+                <Navbar userName={userName} />
+                <Main />
+            </div>
+        </OrderPageStyled>
+    );
 }
 
-export default OrderPage
+const OrderPageStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: ${theme.colors.primary};
+    height: 100vh;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        background: red;
+        height: 95vh;
+        width: calc(100% - 5vh);
+        max-width: 1400px;
+        border-radius: ${theme.borderRadius.extraRound};
+    }
+`;
+
+export default OrderPage;
