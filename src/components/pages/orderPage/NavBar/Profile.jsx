@@ -47,7 +47,7 @@ const ProfileStyled = styled.div`
                     color: ${theme.colors.greyDark};
                 }
                 small {
-                    font-size: ${theme.fonts.sizes.xxs};
+                    font-size: ${theme.fonts.size.XXS};
                     color: ${theme.colors.greyBlue};
                     font-weight: ${theme.fonts.weights.medium};
                     text-decoration: none;
@@ -63,7 +63,7 @@ const ProfileStyled = styled.div`
         height: auto;
         display: flex;
         height: 100%;
-        font-size: ${theme.fonts.sizes.P4};
+        font-size: ${theme.fonts.size.P4};
         color: ${theme.colors.greyBlue};
     }
 `;

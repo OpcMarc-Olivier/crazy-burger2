@@ -20,7 +20,7 @@ const LogoStyled = styled.div`
     h1 {
         color: ${theme.colors.primary_burger};
         font-family: "Amatic SC", cursive;
-        font-size: ${theme.fonts.sizes.P4};
+        font-size: ${theme.fonts.size.P4};
         font-style: normal;
         font-weight: ${theme.fonts.weights.bold};
         margin: 0;

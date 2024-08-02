@@ -30,7 +30,7 @@ const InputStyled = styled.div`
 
     input::placeholder {
         font-family: Arial;
-        font-size: ${theme.fonts.sizes.P1};
+        font-size: ${theme.fonts.size.P1};
         color: ${theme.colors.greyMedium};
         width: 300px;
     }
