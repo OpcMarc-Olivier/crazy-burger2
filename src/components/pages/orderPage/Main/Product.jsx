@@ -19,16 +19,26 @@ function Product({ imageSource, title, price }) {
 }
 const ProductStyled = styled.div`
     background: red;
-    width: 240px;
+    width: 200px;
     height: 330px;
+    padding: 20px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-rows: 65% 1fr;
     .image {
         border: 1px solid fuchsia;
-        width: 100px;
+        width: 100%;
         height: auto;
+        margin-top: 30px;
+        border: 1px solid yellow;
         img {
-            width: 100px;
+            width: 100%;
             height: 100%;
+            object-fit: contain;
         }
+    }
+    .info-text {
+        border: 1px solid purple;
     }
 `;
 
