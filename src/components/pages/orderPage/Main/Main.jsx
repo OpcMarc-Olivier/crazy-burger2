@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../assets/theme";
+import Menu from "./Menu";
 
 function Main() {
     return (
         <MainStyled className="main">
             <div className="basket">Basket</div>
-            <div className="menu">Menu</div>
+            <Menu />
         </MainStyled>
     );
 }
@@ -22,9 +23,6 @@ const MainStyled = styled.div`
 
     .basket {
         background: pink;
-    }
-    .menu {
-        background: purple;
     }
 `;
 
