@@ -18,7 +18,7 @@ const LogoStyled = styled.div`
     margin-bottom: ${theme.spacing.md};
     margin-top: ${theme.spacing.md};
     h1 {
-        color: ${theme.colors.primary_burger};
+        color: ${theme.colors.primary};
         font-family: "Amatic SC", cursive;
         font-size: ${theme.fonts.size.P4};
         font-style: normal;
