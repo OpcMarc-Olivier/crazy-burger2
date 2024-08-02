@@ -1,7 +1,7 @@
 import { BsPersonCircle } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { theme } from "../../../assets/theme/index";
+import { theme } from "../../../../assets/theme/index";
 
 export default function Profile({ userName }) {
     return (
