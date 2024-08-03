@@ -19,7 +19,7 @@ function Product({ imageSource, title, price }) {
     );
 }
 const ProductStyled = styled.div`
-    background: red;
+    background: ${theme.colors.white};
     box-sizing: border-box;
     width: 240px;
     height: 330px;
@@ -28,6 +28,8 @@ const ProductStyled = styled.div`
     padding-bottom: 10px;
     display: grid;
     grid-template-rows: 65% 1fr;
+    box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
+    border-radius: ${theme.borderRadius.extraRound};
     .image {
         border: 1px solid fuchsia;
         width: 100%;
