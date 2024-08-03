@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../assets/theme/index";
+import { theme } from "../../assets/theme";
 
 function PrimaryButton({ Icon, label, className }) {
     return (
