@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../assets/theme/index";
 import PrimaryButton from "../../../reusable-ui/PrimaryButton.jsx";
+import { formatPrice } from "../../../../utils/maths";
 
 function Product({ imageSource, title, price }) {
     return (
@@ -12,7 +13,7 @@ function Product({ imageSource, title, price }) {
             <div className="text-info">
                 <div className="title"> {title}</div>
                 <div className="description">
-                    <div className="left-description">{price}</div>
+                    <div className="left-description">{formatPrice(price)}</div>
                     <PrimaryButton
                         className="primary-button"
                         label={"Ajouter"}
