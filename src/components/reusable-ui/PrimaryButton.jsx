@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../assets/theme/index";
+import { theme } from "../../assets/theme";
 
-function PrimaryButton({ Icon, label }) {
+function PrimaryButton({ Icon, label, className }) {
     return (
-        <PrimaryButtonStyled>
+        <PrimaryButtonStyled className={className}>
             <label>{label}</label>
             {Icon && Icon}
         </PrimaryButtonStyled>
@@ -12,39 +12,55 @@ function PrimaryButton({ Icon, label }) {
 }
 
 const PrimaryButtonStyled = styled.button`
-    display: flex;
-    align-items: center;
     width: 100%;
-    color: white;
-    padding: 18px 106px;
-    border: 1px solid ${theme.colors.primary_burger};
-    background-color: ${theme.colors.primary_burger};
-    border-radius: ${theme.borderRadius.round};
-    font-family: Arial;
-    font-size: ${theme.fonts.P0};
-    font-weight: ${theme.fonts.weights.heavy};
-    line-height: ${theme.fonts.P0};
+    border: 1px solid red;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; //is used in case you want to create interactive icons where an icon replaces the text label.
+    white-space: nowrap; //prevents the text label from wrapping to the next line.
+    text-decoration: none; //removes the text decoration in case you’re applying the .btn class to a link.
+    line-height: 1;
 
-    &:hover:not(:disabled) {
-        color: ${theme.colors.primary_burger};
-        background-color: ${theme.colors.white};
-        border: 1px solid ${theme.colors.primary_burger};
-        transition: all 200ms ease-in-out;
-    }
-    &:active {
-        color: ${theme.colors.primary_burger};
-        background-color: ${theme.colors.white};
-        border: 1px solid ${theme.colors.primary_burger};
-    }
+    padding: 18px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    background-color: #ff9f1b;
+    border: 1px solid #ff9f1b;
+
     &:hover {
-        cursor: pointer;
+        color: ${theme.colors.primary};
+        background-color: ${theme.colors.white};
+        border: 1px solid ${theme.colors.primary};
+        transition: all 200ms ease-out;
     }
-    &:disabled {
-        opacity: 0.6;
+
+    &:active {
+        background-color: ${theme.colors.primary};
+        color: ${theme.colors.white};
+    }
+
+    &.is-disabled {
+        opacity: 50%;
         cursor: not-allowed;
+        z-index: 2;
     }
-    label {
-        cursor: pointer;
+
+    &.with-focus {
+        border: 1px solid white;
+        background-color: ${theme.colors.white};
+        color: ${theme.colors.primary};
+        :hover {
+            color: ${theme.colors.white};
+            background-color: ${theme.colors.primary};
+            border: 1px solid ${theme.colors.white};
+        }
+        :active {
+            background-color: ${theme.colors.white};
+            color: ${theme.colors.primary};
+        }
     }
 `;
 

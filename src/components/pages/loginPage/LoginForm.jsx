@@ -69,7 +69,7 @@ const LoginFormStyled = styled.form`
         margin-bottom: 20px;
 
         h1 {
-            font-size: ${theme.fonts.sizes.P5};
+            font-size: ${theme.fonts.size.P5};
             font-weight: ${theme.fonts.weights.bold};
             margin: 0;
             color: ${theme.colors.white};
@@ -80,7 +80,7 @@ const LoginFormStyled = styled.form`
             margin-block: ${theme.gridUnit * 5}px;
         }
         h2 {
-            font-size: ${theme.fonts.sizes.P4};
+            font-size: ${theme.fonts.size.P4};
             margin: 0;
             color: ${theme.colors.white};
         }
@@ -95,7 +95,7 @@ const LoginFormStyled = styled.form`
         width: 400px;
     }
     .icon {
-        font-size: ${theme.fonts.sizes.P0};
+        font-size: ${theme.fonts.size.P0};
     }
 `;
 
