@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../../assets/theme/index";
 
-export default function Profile({ userName }) {
+export default function Profile({ userName, className }) {
     return (
-        <ProfileStyled>
+        <ProfileStyled className={className}>
             <div className="info">
                 <p>
                     Hey, <b>{userName}</b>
@@ -28,6 +28,7 @@ const ProfileStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     min-width: 100px;
+    padding-left: 50px;
 
     .info {
         text-align: right;
