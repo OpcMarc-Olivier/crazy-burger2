@@ -7,24 +7,46 @@ function Main() {
     return (
         <MainStyled className="main">
             {/* <div className="basket">Basket</div> */}
-            <Menu />
+            <div className="menu-and-admin">
+                <Menu />
+                <div className="admin">Admin</div>
+            </div>
         </MainStyled>
     );
 }
 
 const MainStyled = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    flex: 1;
+    background: ${theme.colors.background_white};
+    border: 3px solid green;
+    height: calc(95vh - 13vh);
+
     border-bottom-left-radius: ${theme.borderRadius.extraRound};
     border-bottom-right-radius: ${theme.borderRadius.extraRound};
-    background: ${theme.colors.background_white};
     box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
-    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: 1fr;
 
     /* .basket {
         background: pink;
     } */
+
+    .menu-and-admin {
+        position: relative;
+        overflow-y: hidden;
+        display: grid;
+        border-bottom-left-radius: ${theme.borderRadius.extraRound};
+        border-bottom-right-radius: ${theme.borderRadius.extraRound};
+
+        .admin {
+            background: red;
+            height: 250px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
 `;
 
 export default Main;

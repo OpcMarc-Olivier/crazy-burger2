@@ -18,7 +18,7 @@ const NavBarStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     background: ${theme.colors.white};
-    height: 98px;
+    height: 13vh;
     padding: 20px;
     border-top-left-radius: ${theme.borderRadius.extraRound};
     border-top-right-radius: ${theme.borderRadius.extraRound};
