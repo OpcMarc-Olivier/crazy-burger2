@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { theme } from "../../../../../assets/theme";
 
 function AdminPanel() {
-    return <AdminPanelStyled>AdminPanel</AdminPanelStyled>;
+    return <AdminPanelStyled></AdminPanelStyled>;
 }
 const AdminPanelStyled = styled.div`
     height: 250px;
