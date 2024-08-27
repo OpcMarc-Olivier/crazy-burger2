@@ -7,24 +7,13 @@ import OrderContext from "../../../../context/OrderContext";
 
 function Main() {
     const { isModeAdmin, setIsModeAdmin } = useContext(OrderContext);
-    const [isCollapsed, setIsCollapsed] = useState(false);
-    const [isAddSelected, setIsAddSelected] = useState(true);
-    const [isEditSelected, setIsEditSelected] = useState(false);
+
     return (
         <MainStyled className="main">
             {/* <div className="basket">Basket</div> */}
             <div className="menu-and-admin">
                 <Menu />
-                {isModeAdmin && (
-                    <Admin
-                        isCollapsed={isCollapsed}
-                        setIsCollapsed={setIsCollapsed}
-                        isAddSelected={isAddSelected}
-                        setIsAddSelected={setIsAddSelected}
-                        isEditSelected={isEditSelected}
-                        setIsEditSelected={setIsEditSelected}
-                    />
-                )}
+                {isModeAdmin && <Admin />}
             </div>
         </MainStyled>
     );
