@@ -6,10 +6,14 @@ import { theme } from "../../../../../assets/theme/index.js";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdModeEditOutline } from "react-icons/md";
 
-function AdminTabs({ isCollapsed, setIsCollapsed }) {
-    const [isAddSelected, setIsAddSelected] = useState(true);
-    const [isEditSelected, setIsEditSelected] = useState(false);
-
+function AdminTabs({
+    isCollapsed,
+    setIsCollapsed,
+    isAddSelected,
+    setIsAddSelected,
+    isEditSelected,
+    setIsEditSelected,
+}) {
     const handleClick = () => {
         setIsCollapsed(!isCollapsed);
     };

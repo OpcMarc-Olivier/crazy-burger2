@@ -2,8 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../../assets/theme";
 
-function AdminPanel() {
-    return <AdminPanelStyled></AdminPanelStyled>;
+function AdminPanel({ isAddSelected, isEditSelected }) {
+    return (
+        <AdminPanelStyled>
+            {isAddSelected && <p>Ajouter un produit</p>}
+            {isEditSelected && <p>Modifier un produit</p>}
+        </AdminPanelStyled>
+    );
 }
 const AdminPanelStyled = styled.div`
     height: 250px;
