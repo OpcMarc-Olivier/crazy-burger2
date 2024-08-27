@@ -1,6 +1,4 @@
 import { AiOutlinePlus } from "react-icons/ai";
-import { BsFillSunFill } from "react-icons/bs";
-import { FiSettings } from "react-icons/fi";
 import { MdModeEditOutline } from "react-icons/md";
 
 export const tabsConfig = [
@@ -13,16 +11,6 @@ export const tabsConfig = [
         index: "edit",
         label: "Modifier un produit",
         Icon: <MdModeEditOutline />,
-    },
-    {
-        index: "settings",
-        label: "Modifier paramètres",
-        Icon: <FiSettings />,
-    },
-    {
-        index: "theme",
-        label: "Modifier thème",
-        Icon: <BsFillSunFill />,
     },
 ];
 

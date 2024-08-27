@@ -13,7 +13,7 @@ function AdminPanel() {
 
     return (
         <AdminPanelStyled>
-            <p>{tabSelected.label}</p>
+            <p>{tabSelected && tabSelected.label}</p>
         </AdminPanelStyled>
     );
 }

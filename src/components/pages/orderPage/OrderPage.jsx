@@ -6,7 +6,7 @@ import { theme } from "../../../assets/theme/index.js";
 import OrderContext from "../../../context/OrderContext";
 
 function OrderPage() {
-    const [isModeAdmin, setIsModeAdmin] = useState(true);
+    const [isModeAdmin, setIsModeAdmin] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [currentTabSelected, setCurrentTabSelected] = useState("add");
 
