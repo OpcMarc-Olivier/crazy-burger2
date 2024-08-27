@@ -95,7 +95,7 @@ const LoginFormStyled = styled.form`
         width: 400px;
     }
     .icon {
-        font-size: ${theme.fonts.size.P0};
+        font-size: ${theme.fonts.size.SM};
     }
 `;
 

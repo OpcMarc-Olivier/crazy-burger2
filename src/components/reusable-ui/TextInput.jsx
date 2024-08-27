@@ -13,18 +13,19 @@ function TextInput({ value, onChange, Icon, className, ...extraProps }) {
 
 const InputStyled = styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 18px 24px;
     color: #d3d3d3;
-    border-radius: 5px;
+    border-radius: ${theme.borderRadius.round};
     gap: 13px;
     background: ${theme.colors.white};
+    width: 100%;
 
     input {
+        font-size: ${theme.fonts.size.SM};
         color: ${theme.colors.dark};
         border: none;
-        padding-right: 184px;
+        width: 100%;
         outline: none;
     }
 
@@ -32,11 +33,11 @@ const InputStyled = styled.div`
         font-family: Arial;
         font-size: ${theme.fonts.size.P1};
         color: ${theme.colors.greyMedium};
-        width: 300px;
     }
 
     .icon {
         color: ${theme.colors.greyDark};
+        font-size: ${theme.fonts.size.SM};
     }
 `;
 
