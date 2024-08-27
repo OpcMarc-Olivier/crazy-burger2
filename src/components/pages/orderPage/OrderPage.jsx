@@ -8,18 +8,15 @@ import OrderContext from "../../../context/OrderContext";
 function OrderPage() {
     const [isModeAdmin, setIsModeAdmin] = useState(true);
     const [isCollapsed, setIsCollapsed] = useState(false);
-    const [isAddSelected, setIsAddSelected] = useState(true);
-    const [isEditSelected, setIsEditSelected] = useState(false);
+    const [currentTabSelected, setCurrentTabSelected] = useState("add");
 
     const orderContextValue = {
         isModeAdmin,
         setIsModeAdmin,
         isCollapsed,
         setIsCollapsed,
-        isAddSelected,
-        setIsAddSelected,
-        isEditSelected,
-        setIsEditSelected,
+        currentTabSelected,
+        setCurrentTabSelected,
     };
     return (
         <OrderContext.Provider value={orderContextValue}>
