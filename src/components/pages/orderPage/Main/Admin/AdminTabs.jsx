@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Tab from "../../../../reusable-ui/Tab.jsx";
 import { theme } from "../../../../../assets/theme/index.js";
 import OrderContext from "../../../../../context/OrderContext";
-import { getTabsConfig } from "././tabsConfig.jsx";
+import { tabsConfig } from "././tabsConfig.jsx";
 
 function AdminTabs() {
     const {
@@ -19,7 +19,7 @@ function AdminTabs() {
         setCurrentTabSelected(tabSelected);
     };
 
-    const tabs = getTabsConfig(currentTabSelected, selectTab);
+    const tabs = tabsConfig;
 
     return (
         <AdminTabsStyled>
@@ -36,8 +36,10 @@ function AdminTabs() {
                     index={tab.index}
                     label={tab.label}
                     Icon={tab.Icon}
-                    onClick={tab.onClick}
-                    className={tab.className}
+                    onClick={() => selectTab(tab.index)}
+                    className={
+                        currentTabSelected === tab.index ? "is-active" : ""
+                    }
                 />
             ))}
         </AdminTabsStyled>
