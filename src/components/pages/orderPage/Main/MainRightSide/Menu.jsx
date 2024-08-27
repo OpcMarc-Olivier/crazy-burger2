@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
-import { theme } from "../../../../assets/theme/index";
-import Card from "../../../reusable-ui/Card";
-import { formatPrice } from "../../../../utils/maths";
+import { fakeMenu2 } from "../../../../../fakeData/fakeMenu";
+import { theme } from "../../../../../assets/theme";
+import Card from "../../../../reusable-ui/Card.jsx";
+import { formatPrice } from "../../../../../utils/maths";
 
 function Menu() {
     const [menu, setMenu] = useState(fakeMenu2);

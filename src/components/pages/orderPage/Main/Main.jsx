@@ -1,20 +1,12 @@
-import React, { useContext, useState } from "react";
 import styled from "styled-components";
+import MainRightSide from "./MainRightSide/MainRightSide.jsx";
 import { theme } from "../../../../assets/theme";
-import Menu from "./Menu";
-import Admin from "./Admin/Admin";
-import OrderContext from "../../../../context/OrderContext";
 
 function Main() {
-    const { isModeAdmin, setIsModeAdmin } = useContext(OrderContext);
-
     return (
-        <MainStyled className="main">
-            {/* <div className="basket">Basket</div> */}
-            <div className="menu-and-admin">
-                <Menu />
-                {isModeAdmin && <Admin />}
-            </div>
+        <MainStyled>
+            {/* <Basket /> */}
+            <MainRightSide />
         </MainStyled>
     );
 }
@@ -29,18 +21,6 @@ const MainStyled = styled.div`
 
     display: grid;
     grid-template-columns: 1fr;
-
-    /* .basket {
-        background: pink;
-    } */
-
-    .menu-and-admin {
-        position: relative;
-        overflow-y: hidden;
-        display: grid;
-        border-bottom-left-radius: ${theme.borderRadius.extraRound};
-        border-bottom-right-radius: ${theme.borderRadius.extraRound};
-    }
 `;
 
 export default Main;

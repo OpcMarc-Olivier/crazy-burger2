@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { theme } from "../../../../../assets/theme";
-import OrderContext from "../../../../../context/OrderContext";
+import { theme } from "../../../../../../assets/theme";
+import OrderContext from "../../../../../../context/OrderContext";
 import { tabsConfig, getTabSelected } from "./tabsConfig.jsx";
 
 function AdminPanel() {
